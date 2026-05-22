@@ -5,76 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elicia Makombi | Portfolio</title>
     <style>
+    :root {
+        /* Définition des couleurs exactes de l'affiche */
+        --deep-blue: #050c1f; /* Le bleu marine sombre de fond */
+        --magenta-pink: #f52d91; /* Le rose fuchsia vif d'accent */
+        --white-text: #ffffff;
+        --card-background: rgba(10, 20, 45, 0.9); /* Un bleu marine légèrement plus clair pour les cartes */
+    }
+
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f0f2f5;
+        background: linear-gradient(135deg, var(--deep-blue) 0%, #0c1a3b 100%); /* Fond dégradé sombre */
         margin: 0;
         padding: 20px;
-        color: #333;
+        color: var(--white-text); /* Texte blanc partout */
     }
+
     header {
-        background-color: #1a1a1a;
-        color: white;
-        padding: 40px 20px;
+        background-color: var(--magenta-pink); /* Header rose vif */
+        color: var(--white-text);
+        padding: 60px 20px;
         text-align: center;
         border-radius: 12px;
         margin-bottom: 30px;
+        box-shadow: 0 4px 20px rgba(245, 45, 145, 0.3); /* Ombre rose */
     }
-    .header-photo-container {
-        margin: 15px auto;
-        width: 150px;
-        height: 150px;
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-top: 0;
     }
+
     .header-photo {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        border: 4px solid #0077b5;
-        object-fit: cover;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        width: 180px;  /* On agrandit la photo (avant c'était 120-150px) */
+        height: 180px; /* Doit être identique à la largeur pour rester un cercle parfait */
+        border-radius: 50%; /* Garde la photo en cercle */
+        border: 8px solid white; /* On double l'épaisseur de la bordure blanche (8px au lieu de 4px) */
+        object-fit: cover; /* Important : garde la photo bien centrée et non déformée */
     }
+
+
     .card {
-        background: white;
-        padding: 25px;
-        margin: 20px auto;
-        max-width: 800px;
+        background-color: var(--card-background); /* Fond sombre pour les cartes */
         border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        border-left: 8px solid #0077b5;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(245, 45, 145, 0.1); /* Bordure rose très fine */
     }
-    h2 { color: #0077b5; margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-    .personal-photo {
-        width: 100%;
-        max-width: 500px;
-        border-radius: 10px;
-        display: block;
-        margin: 20px auto;
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(245, 45, 145, 0.2); /* Ombre rose au survol */
     }
-    a { color: #0077b5; text-decoration: none; font-weight: bold; }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; } 
-    personal-photo-container {
-    text-align: center;
-    margin: 20px 0;
+
+    h2 {
+        color: var(--magenta-pink); /* Titres rose vif */
+        border-bottom: 2px solid var(--magenta-pink);
+        padding-bottom: 10px;
+        margin-top: 0;
+    }
+
+    /* Style des badges de compétences */
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    ul li {
+        background-color: var(--magenta-pink); /* Badges rose vif */
+        color: var(--white-text);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    /* Style des liens de contact */
+    #contact a {
+        color: var(--white-text);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s;
+    }
+
+    #contact a:hover {
+        color: var(--magenta-pink); /* Liens deviennent rose au survol */
+        text-decoration: underline;
+    }
+
+    .linkedin-link {
+    color: #ff2a85; /* Donne une belle couleur rose magenta comme tes titres */
+    text-decoration: underline; /* Souligne le lien pour qu'on sache qu'il est cliquable */
+    font-weight: bold;
 }
 
-.personal-photo {
-    width: 100%;
-    max-width: 450px; /* Taille idéale pour une photo en pied */
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.linkedin-link:hover {
+    color: white; /* Le lien devient blanc quand on passe la souris dessus */
 }
-</style>   
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Elicia Makombi</h1>
+    
     <div class="header-photo-container">
-    <img src="photo1.jpg.png" alt="Photo de l'Ingénieure Elicia Makombi" class="header-photo">
-</div>
+        <img src="photo-elicia.png.png" alt="Elicia Makombi" class="header-photo">
+    </div>
+    <h1>Elicia Makombi</h1>
+</header>
 
     <p>Ingénieure Informaticienne & Développeuse Full-Stack</p>
 </header>
@@ -88,36 +131,25 @@
     <br>
     <div class="education-item">
         <strong>Licence en Informatique de Gestion</strong><br>
-        <span>Haute École de Commerce de Kinshasa (HEC-Kin) | Diplômée en 2025</span>
+        <span> Diplômée en 2025</span>
     </div>
 </section>
 <section class="card">
     <h2>À propos de moi</h2>
     <p>Étudiante en Master Architecture Logicielle à HEC-Kin, passionnée par le développement full-stack et l'optimisation des systèmes informatiques.</p>
 </section>
-<section>
+<section class="card">
     <h2>Mes Projets</h2>
-    <div class="card">
+    <div class="project-item">
         <h3>Application de Gestion d'Étudiants</h3>
         <p>Développement complet avec PHP et MySQL.</p>
     </div>
 </section>
+</section>
 
-</body>
-</html>
-<section id="contact">
-    section class="card">
-    <h2>Profil Personnel</h2>
-    <div class="personal-photo-container">
-        <img src="photo2.jpg.jpg" alt="Elicia Makombi" class="personal-photo">
-    </div>
-    <p>Passionnée par la technologie et le design, j'aime allier rigueur technique et créativité.</p>
 </section>
-    <h2>Contact</h2>
-    <p>📧 Email : <a href="mailto:eliciamakombi@gmail.com">eliciamakombi@gmail.com</a></p>
-<p>🔗 <a href="https://www.linkedin.com/feed/" target="_blank">Mon profil LinkedIn</a></p>
-</section>
-section>
+
+<section class="card">
     <h2>Compétences</h2>
     <ul>
         <li>Développement Web (HTML, CSS, PHP, JavaScript)</li>
@@ -126,3 +158,15 @@ section>
         <li>Architecture Logicielle</li>
     </ul>
 </section>
+
+<section id="contact" class="card">
+    <h2>Profil Personnel</h2>
+    <div class="personal-photo-container">
+        <img src="photo2.jpg" alt="Elicia Makombi">
+    </div>
+    <p>Passionnée par la technologie et le design, j'aime créer des interfaces...</p>
+   
+      <h2>Contact</h2>
+<p>📧 Email : <a href="mailto:ciamakombi@gmail.com">eliciamakombi@gmail.com</a></p>
+<p>📞 Téléphone : <a href="tel:+243820651998">+243 820 651 998</a></p>
+<p>🔗 <a href="https://www.linkedin.com/feed/" target="_blank" class="linkedin-link">Mon LinkedIn</a></p>
