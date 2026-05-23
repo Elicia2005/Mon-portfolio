@@ -1,0 +1,96 @@
+/* Conteneur principal du formulaire */
+#contact-form {
+    background-color: #121829; /* Fond bleu nuit */
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #1e293b;
+    max-width: 400px; /* Largeur idéale pour un formulaire */
+    margin: 20px auto; /* Centre le formulaire sur la page */
+}
+
+/* Force tous les champs à aller à la ligne (vertical) */
+#contact-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Labels en bleu */
+label {
+    color: #2563eb;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Champs de saisie */
+input, select, textarea {
+    background-color: #0a0e1a;
+    border: 1px solid #1e293b;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%; /* S'adapte à la largeur du formulaire */
+}
+
+/* Bouton bleu */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Utilise ces variables pour tout contrôler */
+:root {
+    --bg-page: #0a0e1a;        /* Fond noir bleu */
+    --accent-blue: #2563eb;    /* Bleu électrique */
+    --text-blue: #60a5fa;      /* Bleu clair pour le texte (au lieu du blanc) */
+}
+
+/* Appliquer le bleu au lieu du blanc */
+body
+/* Couleur bleue pour tout le texte, adieu le blanc ! */
+body {
+    background-color: #0a0e1a;
+    color: #2563eb !important; /* Le texte sera bleu */
+    font-family: sans-serif;
+}
+
+/* S'assure que les titres et labels restent bleus */
+h1, h2, h3, label, .contact-card h3 {
+    color: #2563eb !important;
+}
+
+/res et icônes */
+.contact-card h3, .contact-card i {
+    color: #2563eb !important;
+}
+
+/* Cibler les champs de formulaire pour limiter leur largeur */
+form input,
+form select,
+form textarea {
+    width: 100%;          /* S'adapte à la largeur du conteneur */
+    max-width: 400px;     /* Limite la largeur maximale (pour ne pas être trop gros) */
+    padding: 10px;        /* Espace intérieur pour le confort */
+    margin-bottom: 15px;  /* Espace entre les champs */
+    border: 1px solid #1e293b;
+    border-radius: 8px;   /* Coins arrondis */
+    background-color: #0f172a; /* Fond sombre pour coller au design */
+    color: white;
+}
+
+/* Ajuster le bouton d'envoi */
+form button {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

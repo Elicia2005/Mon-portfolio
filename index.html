@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elicia Makombi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
     :root {
         /* Définition des couleurs exactes de l'affiche */
@@ -106,7 +109,6 @@
 
 .linkedin-link:hover {
     color: white; /* Le lien devient blanc quand on passe la souris dessus */
-}
     </style>
 </head>
 <body>
@@ -121,6 +123,18 @@
 
     <p>Ingénieure Informaticienne & Développeuse Full-Stack</p>
 </header>
+
+<section id="galerie">
+    <div class="image-wrapper">  
+      <img src="file_00000000d84c720c8531ecc3ad3648d6.png"  
+             class="prof-img">
+    </div>
+    <div class="image-wrapper">
+        <img src="1766395509046~2.jpg"
+          alt="Équipe de développeurs travaillant sur un projet informatique"         
+             class="prof-img">
+    </div>
+</section>
 
 <section class="card">
     <h2>Formation</h2>
@@ -137,14 +151,29 @@
 <section class="card">
     <h2>À propos de moi</h2>
     <p>Étudiante en Master Architecture Logicielle à HEC-Kin, passionnée par le développement full-stack et l'optimisation des systèmes informatiques.</p>
-</section>
-<section class="card">
-    <h2>Mes Projets</h2>
-    <div class="project-item">
-        <h3>Application de Gestion d'Étudiants</h3>
-        <p>Développement complet avec PHP et MySQL.</p>
+<section id="projets">
+    <h2>Mes Projets Réalisés</h2>
+    <div class="projets-container">
+       
+        <div class="projet-card">
+            <h3>Gestion d'Approvisionnement</h3>
+            <p><strong>Objectif :</strong> Automatisation des flux de marchandises et alertes de seuil critique.</p>
+            <p><strong>Stack :</strong> PHP, MySQL, UML</p>
+        </div>
+
+        <div class="projet-card">
+            <h3>Gestion des Étudiants</h3>
+            <p><strong>Objectif :</strong> Suivi académique, notes et inscriptions centralisées.</p>
+            <p><strong>Stack :</strong> Java, MySQL</p>
+        </div>
+
+        <div class="projet-card">
+            <h3>Système de Vente en Ligne</h3>
+            <p><strong>Objectif :</strong> Boutique interactive avec panier d'achat et gestion dynamique des stocks.</p>
+            <p><strong>Stack :</strong> PHP, JavaScript, CSS</p>
+        </div>
+
     </div>
-</section>
 </section>
 
 </section>
@@ -159,14 +188,56 @@
     </ul>
 </section>
 
-<section id="contact" class="card">
-    <h2>Profil Personnel</h2>
-    <div class="personal-photo-container">
-        <img src="photo2.jpg" alt="Elicia Makombi">
-    </div>
-    <p>Passionnée par la technologie et le design, j'aime créer des interfaces...</p>
+</section>
+<form id="contact-form">
+    <label>Type de personne *</label>
+    <select name="type" required>
+        <option value="">Sélectionnez...</option>
+        <option value="particulier">Particulier</option>
+        <option value="entreprise">Entreprise</option>
+    </select>
+
+    <label>Nom complet *</label>
+    <input type="text" name="nom" placeholder="Votre nom ou raison sociale" required>
+
+    <label>Pays / Ville *</label>
+    <input type="text" name="ville" placeholder="Ex: Kinshasa, RDC" required>
+
+    <label>Email *</label>
+    <input type="email" name="email" placeholder="votre@email.com" required>
+
+    <label>Téléphone (Optionnel)</label>
+    <input type="tel" name="telephone" placeholder="+243 XXX XXX XXX">
+
+    <label>Votre besoin / Projet *</label>
+    <textarea name="message" placeholder="Décrivez votre projet..." required></textarea>
+
+    <button type="submit">Envoyer</button>
+</form>
+</body>
+</html>
+
+<section id="coordonnees">
+    <h2 style="color: #2563eb; margin-bottom: 20px;">Mes coordonnées</h2>
    
-      <h2>Contact</h2>
-<p>📧 Email : <a href="mailto:ciamakombi@gmail.com">eliciamakombi@gmail.com</a></p>
-<p>📞 Téléphone : <a href="tel:+243820651998">+243 820 651 998</a></p>
-<p>🔗 <a href="https://www.linkedin.com/feed/" target="_blank" class="linkedin-link">Mon LinkedIn</a></p>
+    <div class="coord-card">
+        <label>Email</label>
+        <p>ciamakombi@gmail.com</p>
+    </div>
+
+    <div class="coord-card">
+        <label>Téléphone</label>
+        <p>+243 820 651 998</p>
+    </div>
+<section id="coordonnees">
+    
+    <div class="coord-card">
+        <label>LinkedIn</label>
+        <p><a href="https://www.linkedin.com/in/ton-profil" target="_blank" style="color: white; text-decoration: none;">Mon profil LinkedIn</a></p>
+    </div>
+</section>
+    <div class="coord-card">
+        <label>Localisation</label>
+        <p>Kinshasa, RDC</p>
+    </div>
+</section>
